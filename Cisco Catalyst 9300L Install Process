@@ -1,0 +1,10 @@
+Switch#show usb-devices summary
+Switch#show usbflash0:
+Switch#copy usbflash0:9300L/cat9k_iosxe.17.12.04.SPA.bin flash:
+Destination filename [cat9k_iosxe.17.12.04.SPA.bin]? cat9k_iosxe.17.12.04.SPA.bin
+Switch# dir flash:
+Switch(config)#boot system flash:cat9k_iosxe.17.12.04.SPA.bin
+Switch(config)#exit
+Switch#copy running-config startup-config
+Switch#show boot
+Switch#reload
